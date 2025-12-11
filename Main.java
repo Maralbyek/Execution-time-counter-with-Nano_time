@@ -1,24 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        String datasetType = "small";  
+        String datasetType = "small";  // Can be changed to Large in order to execute larger dataset
 
         StudentLinkedList list = new StudentLinkedList();
 
         if (datasetType.equals("small")) {
-            System.out.println("*** Running with SMALL dataset (students.csv) ***\n");
+            System.out.println(" Running with SMALL dataset (students.csv) \n");
             FileReaderUtil.readCSV("students.csv", list);
         } else if (datasetType.equals("large")) {
-            System.out.println("***  Running with LARGE dataset (largedata.csv) ***\n");
+            System.out.println("  Running with LARGE dataset (largedata.csv) \n");
             FileReaderUtil.readCSV("largedata.csv", list);
         } else {
             System.out.println("Invalid dataset type. Use 'small' or 'large'");
             return;
-        }
+        } 
 
         System.out.println("Initial list size: " + list.getSize());
         System.out.println();
 
-        System.out.println("--- Testing Add Operations ---");
+        System.out.println(" Testing Add Operations ");
         long start, end;
         
         start = System.nanoTime();
@@ -39,12 +39,12 @@ public class Main {
         System.out.println();
 
 
-        System.out.println("--- Current List ---");
+        System.out.println(" Current List ");
         list.display();
         System.out.println();
 
 
-        System.out.println("--- Testing Delete Operations ---");
+        System.out.println(" Testing Delete Operations ");
         start = System.nanoTime();
         list.deleteFirst();
         end = System.nanoTime();
@@ -74,7 +74,8 @@ public class Main {
         System.out.println("Search for student: " + (index >= 0 ? "Found at index " + index : "Not found"));
         System.out.println();
 
-
+        System.out.println("Traversing dataset");
         System.out.println("Final list size: " + list.getSize());
     }
+
 }
