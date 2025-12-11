@@ -4,4 +4,3 @@ Execution time counter using Java in LinkedList
 - DeleteFirst
 - DeleteLast
 - Search in CSV using Index
-- 
